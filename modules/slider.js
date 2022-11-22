@@ -99,6 +99,7 @@ function slider({selector,innerWrapperSelector,sliderContainer,slidesSel,arrowLe
     
     
     const dotContainer = document.createElement('div');
+    dotContainer.classList.add('dot-container');
     
     dotContainer.style.cssText = `
     background-color:'red' !important;
