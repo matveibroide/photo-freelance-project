@@ -150,7 +150,7 @@ a {
     margin-top: 5rem;
     width: 90rem;
     height: 35rem;
-    background-color: rgb(227, 236, 233);
+    background-color: var(--bgClr);
 }
 
 

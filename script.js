@@ -25,6 +25,8 @@ observerSlider('.hero-section','.slider');
 
 stickyNav();
 
+
+
 function hideDots() {
     if (window.matchMedia("(max-width: 1000px)").matches) $('.dot-container').hide();
 
@@ -33,7 +35,17 @@ function hideDots() {
 hideDots();
 
 
+function addMargin() {
+    if (window.innerHeight<500) {
+    
+        document.querySelectorAll('.section').forEach(section=>{
+            section.style.marginBottom = '20%'; 
+        });
 
+    }
+}
+
+addMargin();
 
 
 
