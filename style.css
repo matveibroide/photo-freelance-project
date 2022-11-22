@@ -405,12 +405,19 @@ form div {
     }
 
     .slider {
-        display: flex;
+        display: none;
         flex-direction: column;
         width: 100%;
         
-
     }
+
+    .image-container {
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 1;
+    }
+
+    
 
     .section-contact {
         text-align: center;
@@ -421,7 +428,16 @@ form div {
         max-width: 290px;
     }
 
+    .new-link {
+        
+        color: white;
+    }
 
+    .new-link a {
+        line-height: 3.5ch;
+        color: var(--btnFontClr);
+        
+    }
 
 
 }
