@@ -8,57 +8,70 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <div id="home" class="section promotion-section">
-    <div class="description-wrapper">
-        <div class="description">
-            <h1>Book your photos NOW</h1>
-            <p>Let professional  photograoher <br>
-            to take care of your look
-            </p>
-        </div>
-    <img src="./images/8i65p68BT (1).jpg" alt="" srcset="">
-    </div>
-</div>
-    <div class="section section-offers">
-    <div class="offers"><a href="#home"> 1.HOME</a></div>
-    <div class="offers"><a href="#photos">2.PHOTOS</a> </div>
-    <div class="offers"> <a href="">3.CONTACT</a></div>
-    
-        
-    </div>
-    
-    <div id="photos"  class="section hero-section">
-        <div class="nav-bar">
-            <div class="nav-components"><a href=""></a>HOME<a href=""></a></div>
-            <div class="nav-components"><a href=""></a>PHOTOS<a href=""></a></div>
-            <div class="nav-components"><a href=""></a>CONTACT<a href=""></a></div>
 
+    <div class="container">
+        <dialog class="modal">
+            <div class="text">Fill this form and we will contact you:</div>
+            <form method="dialog" action="">
+                <div class="div">Name:</div>
+                <input id="name" type="text">
+                <div class="div">phone</div>
+                <label for="phone"><input type="phone"></label>
+                <button class="btn">Send</button>
+            </form>
+        </dialog>
+        
+        <div id="home" class="section promotion-section">
+        <div class="description-wrapper">
+            <div class="description">
+                <h1>Order your photos NOW</h1>
+                <p>Let professional  photograoher <br>
+                to take care of your look
+                </p>
+            </div>
+        <img src="./images/8i65p68BT (1).jpg" alt="" srcset="">
         </div>
-        <div class="slider">
-            <i id="left" class="fa-solid fa-arrow-left fa-2xl"></i>
-            <div class="slider-inner-wrapper">
-            <div class="slides-container">
-                <div class="slides slide1"></div>
-                <div class="slides slide2"></div>
-                <div class="slides slide3"></div>
-                <div class="slides slide4"></div>
-            </div>
-            </div>
-            <i id="right" class="fa-solid fa-arrow-right fa-2xl"></i>
-            </div>
+        </div>
+        <div class="section section-offers">
+        <div class="offers"><a href="#home"> 1.HOME</a></div>
+        <div class="offers"><a href="#photos">2.PHOTOS</a> </div>
+        <div class="offers"><a class="contact-link" href="">3.CONTACT</a></div>
+        
+        
         </div>
         
-        <div class="section section-contact">
-            <h1>Get my best photos</h1>
-            <button class="hero-btn">GET NOW</button>
-        </div>
+        <div id="photos"  class="section hero-section">
+            <div class="nav-bar">
+                <div class="nav-components"><a href="#home">HOME</a></div>
+                <div class="nav-components"><a href="#photos">PHOTOS</a></div>
+                <div class="nav-components"><a class="contact-link" href="">CONTACT</a></div>
+            </div>
+            <div class="slider">
+                <i id="left" class="fa-solid fa-arrow-left fa-2xl"></i>
+                <div class="slider-inner-wrapper">
+                <div class="slides-container">
+                    <div class="slides slide1"></div>
+                    <div class="slides slide2"></div>
+                    <div class="slides slide3"></div>
+                    <div class="slides slide4"></div>
+                </div>
+                </div>
+                <i id="right" class="fa-solid fa-arrow-right fa-2xl"></i>
+                </div>
+                <div class="link"></div>
+            </div>
         
-        <div class="footer">
-            <i class="fa-brands fa-instagram fa-2xl"></i>
-            <i class="fa-brands fa-facebook fa-2xl"></i>
-            <i class="fa-brands fa-vk fa-2xl"></i>
-        </div>
+            <div class="section section-contact">
+                <h1>Get my best photos</h1>
+                <button class="hero-btn contact-link">GET NOW</button>
+            </div>
+        
+            <div class="footer">
+                <i class="fa-brands fa-instagram fa-2xl"></i>
+                <i class="fa-brands fa-facebook fa-2xl"></i>
+                <i class="fa-brands fa-vk fa-2xl"></i>
+            </div>
+    </div>
         
     <script src="https://kit.fontawesome.com/0785bf0fcf.js" crossorigin="anonymous"></script>
     <script src="./dist/bundle.js"></script>

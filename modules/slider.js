@@ -31,10 +31,35 @@ function slider({selector,innerWrapperSelector,sliderContainer,slidesSel,arrowLe
     
             let offset  = 0;
             let counter = 0;
+
+            const link = document.querySelector('.link');
+            link.innerHTML = '<a href="https://www.freepik.com/free-photo/close-up-shot-pretty-woman-with-perfect-teeth-dark-clean-skin-having-rest-indoors-smiling-happily-after-received-good-positive-news_9440478.htm#query=portraits&position=0&from_view=search&track=sph">Image by wayhomestudio</a> on Freepik';
+            link.style.cssText = `
+            font-size:1rem;
+            margin:2ch 1ch;
+            `;
     
-          
+            function changeLink() {
+
+                switch (counter) {
+                    case 0: 
+                link.innerHTML = '<a href="https://www.freepik.com/free-photo/close-up-shot-pretty-woman-with-perfect-teeth-dark-clean-skin-having-rest-indoors-smiling-happily-after-received-good-positive-news_9440478.htm#query=portraits&position=0&from_view=search&track=sph">Image by wayhomestudio</a> on Freepik';
+                    break;
+                    case 1:
+                link.innerHTML ='<a href="https://www.freepik.com/free-photo/wedding-couple-france_1612423.htm#query=wedding%20photo&position=2&from_view=search&track=sph">Image by senivpetro</a> on Freepik';
+                    break;
+                    case 2:
+                link.innerHTML = 'Image by <a href="https://www.freepik.com/free-photo/father-son-spending-time-together_19865456.htm?query=family%20photo?query=family%20photo?query=family%20photo&collectionId=372&&position=1&from_view=collections">Freepik</a>'
+                    break;
+                    case 3:
+                link.innerHTML = '<a href="https://www.freepik.com/free-photo/two-happy-men-working-together-new-business-project_7337520.htm#query=work&position=0&from_view=search&track=sph">Image by drobotdean</a> on Freepik';
+            }
+
+
+            }
     
             arrowLeft.addEventListener('click',()=>{
+
                 if (counter <= 0) counter = slides.length;
     
                 counter--;
@@ -45,6 +70,7 @@ function slider({selector,innerWrapperSelector,sliderContainer,slidesSel,arrowLe
                 else {offset-= +width;}
                 console.log(offset);
                 slidesContainer.style.transform = `translateX(-${offset}px)`;
+                changeLink();
     
             });
             
@@ -60,6 +86,7 @@ function slider({selector,innerWrapperSelector,sliderContainer,slidesSel,arrowLe
                     else {offset+= +width;}
                     console.log(offset);
                     slidesContainer.style.transform = `translateX(-${offset}px)`;
+                    changeLink();
         
                 });
     
@@ -117,6 +144,7 @@ function slider({selector,innerWrapperSelector,sliderContainer,slidesSel,arrowLe
         switch (target.getAttribute('data-slide-to')){
     
             case '0':
+                changeLink();
                 offset = 0;
                 counter = 0;
                 slidesContainer.style.transform = `translateX(-${offset}px)`;
@@ -124,6 +152,7 @@ function slider({selector,innerWrapperSelector,sliderContainer,slidesSel,arrowLe
                 dots[counter].style.opacity = '1';
                 break;
             case '1':
+                changeLink();
                 offset = +width * 1;
                 counter = 1;
                 slidesContainer.style.transform = `translateX(-${offset}px)`;
@@ -132,6 +161,7 @@ function slider({selector,innerWrapperSelector,sliderContainer,slidesSel,arrowLe
                 break;
     
             case '2':
+                changeLink();
                 offset = +width * 2;
                 counter = 2;
                 slidesContainer.style.transform = `translateX(-${offset}px)`;
@@ -139,6 +169,7 @@ function slider({selector,innerWrapperSelector,sliderContainer,slidesSel,arrowLe
                 dots[counter].style.opacity = '1';
                 break;
             case '3':
+                changeLink();
                 offset = +width * 3;
                 counter = 3;
                 slidesContainer.style.transform = `translateX(-${offset}px)`;

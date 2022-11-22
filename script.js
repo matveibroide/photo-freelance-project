@@ -1,9 +1,8 @@
 var $ = require( "jquery" );
 import slider from "./modules/slider";
-
-
-
-
+import modal from "./modules/modal";
+import observerNav from "./modules/observers";
+import {observerSlider} from "./modules/observers";
 
 
 
@@ -18,45 +17,12 @@ slider({
     
 });
 
-    // ----------------------observer-navigation---------------------------------
+modal('.modal','.contact-link','.btn');
 
-const options = {
-    root:null,
-    threshold: 0.50, // 0 every little part triggers obs-r, 1 - when whole section in, 0.25 - 25%
-    rootMargin: "0px"
-};
-
-const observerText = new IntersectionObserver(function(entries,observer){
-    entries.forEach(entry=>{
-
-        if (!entry.isIntersecting) {
-
-        document.querySelectorAll('.offers').forEach(el=>{
-
-        el.classList.remove('offers-active');
-        }); }
-
-        else {
-        
-        document.querySelectorAll('.offers').forEach(el=>{
-
-        el.classList.add('offers-active');
-        });
-       
-        
-        }
-        
-    });
-
-}, options);
+observerNav('.section-offers','.offers','offers-active');
+observerSlider('.hero-section','.slider');
 
 
-
-
-const section = document.querySelector('.section-offers');
-
-
-observerText.observe(section);
 
 // ------------------------------------observer-slider--------------------------
 
