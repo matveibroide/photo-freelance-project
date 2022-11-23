@@ -94,7 +94,7 @@ function changePageMobile() {
 
     if (window.matchMedia("(max-width: 400px)").matches) { 
 
-        document.querySelector('.section-contact').style.marginTop = '340%';
+        document.querySelector('.section-contact').style.marginTop = '370%';
 
 }
 
