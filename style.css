@@ -364,6 +364,10 @@ form div {
 /* --------------------------media-query------------------------------------- */
 
 
+
+
+
+
 @media(max-width:1000px) {
 
     body {
@@ -420,6 +424,7 @@ form div {
     
 
     .section-contact {
+        /* margin-top: 250%; */
         text-align: center;
     }
 
@@ -441,4 +446,5 @@ form div {
 
 
 }
+
 

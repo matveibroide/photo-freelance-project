@@ -1,5 +1,5 @@
 
-var $ = require( "jquery" );
+
 
 function observerNav(selectorSection,selectorChild,selectorClass) {
 
@@ -62,11 +62,11 @@ function observerSlider(sectorSelector,childSelector) {
     
             if (!entry.isIntersecting) {
     
-            $(childSelector).css('transform','translateX(100%)');
+            document.querySelector(childSelector).style.transform = 'translateX(100%)';
             }
     
             else {
-                $(childSelector).css('transform','translateX(0%)');
+                document.querySelector(childSelector).style.transform ='translateX(0%)';
             }
             });
     

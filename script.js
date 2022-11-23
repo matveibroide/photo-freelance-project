@@ -1,4 +1,4 @@
-var $ = require( "jquery" );
+
 import slider from "./modules/slider";
 import modal from "./modules/modal";
 import observerNav from "./modules/observers";
@@ -31,8 +31,9 @@ stickyNav();
 
 function changePageMobile() {
     if (window.matchMedia("(max-width: 1000px)").matches) {
-        
-        $('.dot-container').hide();
+        document.querySelector('.slider').remove();
+        document.querySelector('.section-contact').style.marginTop = '200%';
+        document.querySelector('.dot-container').style.display = 'none';
         const imgContainer = document.createElement('div'),
                 imgs = document.querySelectorAll('.slides');
 
@@ -84,7 +85,8 @@ changePageMobile();
 
 function addMargin() {
     if (window.innerHeight<500) {
-    
+
+        document.querySelector('.slider').remove();
         document.querySelectorAll('.section').forEach(section=>{
             section.style.marginBottom = '20%'; 
         });
