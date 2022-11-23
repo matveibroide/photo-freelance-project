@@ -1,7 +1,7 @@
 function slider({selector,innerWrapperSelector,sliderContainer,slidesSel,arrowLeftSel,arrowRightSel}) {
 
     
-    // ---------------------slider-food---------------------------------
+    
     
     function setDotsOpacity(){
         dots.forEach(dot=>dot.style.opacity = '0.5');
@@ -38,7 +38,7 @@ function slider({selector,innerWrapperSelector,sliderContainer,slidesSel,arrowLe
             link.innerHTML = '<a href="https://www.freepik.com/free-photo/close-up-shot-pretty-woman-with-perfect-teeth-dark-clean-skin-having-rest-indoors-smiling-happily-after-received-good-positive-news_9440478.htm#query=portraits&position=0&from_view=search&track=sph">Image by wayhomestudio</a> on Freepik';
             link.style.cssText = `
             font-size:1rem;
-            margin:2ch 1ch;
+            margin:10ch 1ch;
             `;
     
             function changeLink(num) {
