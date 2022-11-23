@@ -31,11 +31,13 @@ stickyNav();
 
 function changePageMobile() {
     if (window.matchMedia("(max-width: 1000px)").matches) {
-        document.querySelector('.slider').remove();
-        document.querySelector('.section-contact').style.marginTop = '200%';
+        
+        document.querySelector('.section-contact').style.marginTop = '150%';
+
+
         document.querySelector('.dot-container').style.display = 'none';
         const imgContainer = document.createElement('div'),
-                imgs = document.querySelectorAll('.slides');
+        imgs = document.querySelectorAll('.slides');
 
         document.querySelector('.hero-section').append(imgContainer);
 
@@ -47,11 +49,9 @@ function changePageMobile() {
 
         imgContainer.append(img);
 
-    
-        
         const newLink = document.createElement('div');
         newLink.classList.add('new-link');
-        img.append(newLink);
+        img.append(newLink); 
             
         const changeInnerContent = (num)=>{
 
@@ -76,7 +76,27 @@ function changePageMobile() {
         });
         
     
+        
     }
+
+    if (window.matchMedia("(max-width: 800px)").matches) {
+
+        document.querySelector('.section-contact').style.marginTop = '170%';
+
+    }
+
+    if (window.matchMedia("(max-width: 650px)").matches) { 
+
+        document.querySelector('.section-contact').style.marginTop = '260%';
+
+    }
+
+
+    if (window.matchMedia("(max-width: 400px)").matches) { 
+
+        document.querySelector('.section-contact').style.marginTop = '340%';
+
+}
 
 }
 
@@ -86,7 +106,6 @@ changePageMobile();
 function addMargin() {
     if (window.innerHeight<500) {
 
-        document.querySelector('.slider').remove();
         document.querySelectorAll('.section').forEach(section=>{
             section.style.marginBottom = '20%'; 
         });

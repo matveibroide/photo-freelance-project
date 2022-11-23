@@ -1,4 +1,4 @@
-var $ = require( "jquery" );
+
 
 function stickyNav() {
 // ---------------------------nav-bar--------------------------------
@@ -10,11 +10,11 @@ window.onscroll = function() {myFunction();};
 const navbar = document.querySelector(".nav-bar");
 
 // Get the offset position of the navbar
-const sticky = navbar.offset();
+const sticky = navbar.offsetTop;
 console.log(sticky);
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
-if (window.pageYOffset >= sticky.top -200) {
+if (window.pageYOffset >= sticky) {
     navbar.style.opacity ='1';
     navbar.classList.add("sticky");
 } else {
